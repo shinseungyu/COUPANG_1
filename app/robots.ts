@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://organic-milk.example.com/sitemap.xml', // Replace with actual domain
+    sitemap: 'http://bisangprod.com/sitemap.xml', // Replace with actual domain
   }
 }

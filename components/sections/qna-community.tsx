@@ -53,13 +53,18 @@ export function QnaCommunity() {
   return (
     <section id="tesla-owner-qna-wrapper" className="py-20 md:py-28 px-6 bg-white dark:bg-slate-950">
       <div className="mx-auto max-w-3xl">
-        <div className="text-center mb-16">
-          <p className="text-blue-600 dark:text-blue-400 text-sm font-semibold tracking-widest uppercase mb-3">
-            Owner Community Q&A
-          </p>
-          <h2 className="text-3xl md:text-4xl font-sans font-bold text-slate-900 dark:text-white text-balance">
-            초보 오너들이 가장 많이 묻는 질문
-          </h2>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-16">
+          <div className="text-center md:text-left">
+            <p className="text-blue-600 dark:text-blue-400 text-sm font-semibold tracking-widest uppercase mb-3">
+              Owner Community Q&A
+            </p>
+            <h2 className="text-3xl md:text-4xl font-sans font-bold text-slate-900 dark:text-white text-balance">
+              초보 오너들이 가장 많이 묻는 질문
+            </h2>
+          </div>
+          <div className="hidden md:block shrink-0">
+            <div dangerouslySetInnerHTML={{ __html: '<iframe src="https://coupa.ng/clK1ex" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>' }} />
+          </div>
         </div>
 
         <div className="flex flex-col gap-12">

@@ -1,14 +1,13 @@
-import React from "react"
+import type { ReactNode } from "react"
 import type { Metadata } from 'next'
-import { Noto_Sans_KR, Noto_Serif_KR } from 'next/font/google'
+import { Noto_Sans_KR } from 'next/font/google'
 
 import './globals.css'
 
 const notoSansKR = Noto_Sans_KR({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700'] })
-const _notoSerifKR = Noto_Serif_KR({ subsets: ['latin'], weight: ['400', '600', '700'] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://tesla-modely-gear.example.com'), // Replace with actual domain
+  metadataBase: new URL('http://bisangprod.com'), // Replace with actual domain
   title: '테슬라 모델 Y 필수 차량용품 및 차박 액세서리 추천 BEST',
   description: '테슬라 모델 Y 오너를 위한 필수 액세서리, 차박 매트, 보호 필름 추천 총정리. 쿠팡 로켓배송 최저가로 바로 확인하세요.',
   keywords: '테슬라 모델 Y 용품, 모델 Y 차박, 테슬라 필수 액세서리, 테슬라 방향제, 모델 Y 매트, 쿠팡 테슬라 용품',
@@ -37,7 +36,7 @@ const jsonLd = {
       'item': {
         '@type': 'Product',
         'name': '[테슬라 모델Y 전용] 3D TPE 방수 트렁크 매트 풀세트',
-        'image': 'https://tesla-modely-gear.example.com/images/trunk-mat.jpg',
+        'image': 'http://bisangprod.com/images/trunk-mat.jpg',
         'description': '흙먼지 완벽 방어, 물청소 1분 컷. 차박 필수템',
         'brand': {
           '@type': 'Brand',
@@ -62,7 +61,7 @@ const jsonLd = {
       'item': {
         '@type': 'Product',
         'name': '모델3/Y 공용 맥세이프 차량용 고속 무선 충전 거치대',
-        'image': 'https://tesla-modely-gear.example.com/images/magsafe.jpg',
+        'image': 'http://bisangprod.com/images/magsafe.jpg',
         'description': '모니터 뒤에 쏙 숨는 깔끔한 순정핏 디자인',
         'brand': {
           '@type': 'Brand',
@@ -87,7 +86,7 @@ const jsonLd = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: ReactNode
 }>) {
   return (
     <html lang="ko">

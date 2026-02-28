@@ -3,39 +3,39 @@ import { ExternalLink, Star, Truck } from "lucide-react";
 const recommendedProducts = [
   {
     id: "prod_1",
-    name: "[테슬라 모델Y 전용] 3D TPE 방수 트렁크 매트 풀세트",
-    brand: "메이튼",
+    name: "Jenofa 풀세트 3D 방수 방진 tpe카매트 간편한 사계절 세트적용 자동차매트",
+    brand: "Jenofa",
     rating: 4.8,
     reviews: 2154,
     price: "79,000",
-    image: "/images/trunk-mat.jpg",
-    coupangLink: "https://link.coupang.com/a/example",
+    iframeHtml: '<iframe src="https://coupa.ng/clK0YQ" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>',
+    coupangLink: "https://link.coupang.com/a/dUSPa2",
     badge: "1위 BEST",
     summary: "흙먼지 완벽 방어, 물청소 1분 컷. 차박 필수템",
   },
   {
     id: "prod_2",
-    name: "모델3/Y 공용 맥세이프 차량용 고속 무선 충전 거치대",
-    brand: "주파집",
+    name: "세상의모든제품 테슬라 모델Y주니퍼 모델3하이랜드 차량용 Qi2 맥세이프 아이스 쿨링 LED 고속 무선충전기 + TEMAI 마운트 거치대",
+    brand: "세상의모든제품",
     rating: 4.9,
     reviews: 892,
     price: "34,500",
-    image: "/images/magsafe.jpg",
-    coupangLink: "https://link.coupang.com/a/example",
+    iframeHtml: '<iframe src="https://coupa.ng/clK072" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>',
+    coupangLink: "https://link.coupang.com/a/dUS6o9",
     badge: "오너 강력추천",
     summary: "모니터 뒤에 쏙 숨는 깔끔한 순정핏 디자인",
   },
   {
     id: "prod_3",
-    name: "테슬라 모델Y 전면 앞유리 햇빛가리개 (알루미늄 프레임)",
-    brand: "루젠",
+    name: "LareinaT 테슬라 콘솔 수납함 테슬라 모델y 주니퍼 악세사리 테슬라 모델3 하이랜드 악세사리 테슬라 차량용품",
+    brand: "LareinaT",
     rating: 4.6,
     reviews: 1543,
     price: "28,900",
-    image: "/images/sunshade.jpg",
-    coupangLink: "https://link.coupang.com/a/example",
+    iframeHtml: '<iframe src="https://coupa.ng/clK1ai" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>',
+    coupangLink: "https://link.coupang.com/a/dUTaNv",
     badge: "여름 필수품",
-    summary: "유리 천장과 앞유리 열기 완벽 차단으로 에어컨 효율 증가",
+    summary: "콘솔 수납을 깔끔하게 정리해주는 맞춤형 트레이",
   }
 ];
 
@@ -62,11 +62,15 @@ export function MustHaveList() {
               key={product.id}
               className="flex flex-col md:flex-row bg-white dark:bg-slate-950 rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
             >
-              {/* Image Placeholder Container (Hidden until user provides image) */}
-              <div className="relative w-full md:w-32 bg-slate-100 dark:bg-slate-900 shrink-0 hidden md:block">
+              {/* Image Iframe Container */}
+              <div className="relative w-full md:w-48 bg-slate-50 dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 shrink-0 hidden md:flex items-center justify-center p-4">
                 <div className="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md z-10 whitespace-nowrap">
                   {product.badge}
                 </div>
+                <div 
+                  className="flex items-center justify-center pointer-events-none scale-110 origin-center" 
+                  dangerouslySetInnerHTML={{ __html: product.iframeHtml }} 
+                />
               </div>
 
               {/* Product Info */}

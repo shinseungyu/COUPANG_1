@@ -22,13 +22,18 @@ export function InstallationGuide() {
   return (
     <section id="easy-setup-steps" className="py-20 md:py-28 px-6 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
       <div className="mx-auto max-w-5xl">
-        <div className="text-center mb-16">
-          <p className="text-blue-600 dark:text-blue-400 text-sm font-semibold tracking-widest uppercase mb-3">
-            Installation
-          </p>
-          <h2 className="text-3xl md:text-4xl font-sans font-bold text-slate-900 dark:text-white text-balance">
-            똥손도 5분 완성, 셀프 장착 가이드
-          </h2>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-16">
+          <div className="text-center md:text-left">
+            <p className="text-blue-600 dark:text-blue-400 text-sm font-semibold tracking-widest uppercase mb-3">
+              Installation
+            </p>
+            <h2 className="text-3xl md:text-4xl font-sans font-bold text-slate-900 dark:text-white text-balance">
+              똥손도 5분 완성, 셀프 장착 가이드
+            </h2>
+          </div>
+          <div className="hidden md:block shrink-0">
+            <div dangerouslySetInnerHTML={{ __html: '<iframe src="https://coupa.ng/clK1et" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>' }} />
+          </div>
         </div>
 
         <div className="flex flex-col gap-10 lg:gap-16">

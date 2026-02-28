@@ -37,14 +37,19 @@ export function ModelYEssentials() {
   return (
     <section id="gear-highlights-wrapper" className="py-24 md:py-32 px-6 bg-slate-50 dark:bg-slate-900">
       <div className="mx-auto max-w-6xl">
-        <div className="text-center mb-20">
-          <p className="text-blue-600 dark:text-blue-400 text-sm font-semibold tracking-widest uppercase mb-4">
-            Must-Have Items
-          </p>
-          <h2 className="text-3xl md:text-5xl font-sans font-extrabold text-slate-900 dark:text-white text-balance leading-tight">
-            출고 직후 <span className="text-blue-600">이 5가지</span>는<br />
-            무조건 준비해야 합니다
-          </h2>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-20">
+          <div className="text-center md:text-left">
+            <p className="text-blue-600 dark:text-blue-400 text-sm font-semibold tracking-widest uppercase mb-4">
+              Must-Have Items
+            </p>
+            <h2 className="text-3xl md:text-5xl font-sans font-extrabold text-slate-900 dark:text-white text-balance leading-tight">
+              출고 직후 <span className="text-blue-600">이 5가지</span>는<br />
+              무조건 준비해야 합니다
+            </h2>
+          </div>
+          <div className="hidden md:block shrink-0">
+            <div dangerouslySetInnerHTML={{ __html: '<iframe src="https://coupa.ng/clK1ee" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>' }} />
+          </div>
         </div>
 
         <div className="grid gap-6 md:gap-8 lg:grid-cols-2">
