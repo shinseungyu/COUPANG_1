@@ -1,5 +1,6 @@
 import type { ReactNode } from "react"
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Noto_Sans_KR } from 'next/font/google'
 
 import './globals.css'
@@ -96,7 +97,26 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${notoSansKR.className} antialiased selection:bg-blue-200 selection:text-blue-900`}>{children}</body>
+      <body className={`${notoSansKR.className} antialiased selection:bg-blue-200 selection:text-blue-900`}>
+        {/* Google 애널리틱스 스크립트 */}
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-7G48VW119S`}
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-7G48VW119S');
+            `,
+          }}
+        />
+        {children}
+      </body>
     </html>
   )
 }
