@@ -9,6 +9,9 @@ const notoSansKR = Noto_Sans_KR({ subsets: ['latin'], weight: ['300', '400', '50
 
 export const metadata: Metadata = {
   metadataBase: new URL('http://bisangprod.com'), // Replace with actual domain
+  alternates: {
+    canonical: '/',
+  },
   title: '테슬라 모델 Y 필수 차량용품 및 차박 액세서리 추천 BEST',
   description: '테슬라 모델 Y 오너를 위한 필수 액세서리, 차박 매트, 보호 필름 추천 총정리. 쿠팡 로켓배송 최저가로 바로 확인하세요.',
   keywords: '테슬라 모델 Y 용품, 모델 Y 차박, 테슬라 필수 액세서리, 테슬라 방향제, 모델 Y 매트, 쿠팡 테슬라 용품',
@@ -23,6 +26,26 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '테슬라 모델 Y 필수 차량용품 큐레이션',
+    description: '테슬라 모델 Y 오너를 위한 필수 액세서리, 차박 매트, 보호 필름 추천 총정리. 쿠팡 로켓배송 최저가로 바로 확인하세요.',
+    images: ['http://bisangprod.com/images/trunk-mat.jpg'],
+  },
+  authors: [{ name: 'Model Y Gear Rankings' }],
+  publisher: 'Model Y Gear Rankings',
+  formatDetection: {
+    telephone: false,
+    date: false,
+    address: false,
+    email: false,
+  },
+  verification: {
+    other: {
+      'naver-site-verification': '8906eee6a697bad8e8a32a3785ef6b956269a43a',
+    },
+    google: '여기에_구글_인증코드_입력',
   },
   other: {
     'google-adsense-account': 'ca-pub-5378247298190063',
