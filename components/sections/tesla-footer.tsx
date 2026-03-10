@@ -1,4 +1,5 @@
 import { ShieldAlert } from "lucide-react";
+import Link from "next/link";
 
 export function TeslaFooter() {
   return (
@@ -47,9 +48,14 @@ export function TeslaFooter() {
 
         </div>
 
-        <div className="mx-auto max-w-5xl mt-16 pt-8 border-t border-slate-800 flex flex-col items-center justify-center text-center">
+        <div className="mx-auto max-w-5xl mt-16 pt-8 border-t border-slate-800 flex flex-col items-center justify-center text-center gap-4">
+          <div className="flex flex-wrap justify-center gap-6 text-xs text-slate-500">
+            <Link href="/privacy-policy" className="hover:text-slate-300 transition-colors">개인정보 처리방침</Link>
+            <Link href="/terms-of-service" className="hover:text-slate-300 transition-colors">이용약관</Link>
+            <Link href="/cookie-policy" className="hover:text-slate-300 transition-colors">쿠키 정책</Link>
+          </div>
           <p className="text-xs text-slate-600">
-            © {new Date().getFullYear()} Model Y Gear Rankings. All rights reserved.
+            © {new Date().getFullYear()} Model Y Gear Rankings. All rights reserved. | 문의: tlsfkaus0711@gmail.com
           </p>
         </div>
       </div>
