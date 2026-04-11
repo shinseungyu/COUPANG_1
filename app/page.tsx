@@ -4,6 +4,7 @@ import { PremiumGearShowcase } from "@/components/sections/premium-gear-showcase
 import { InstallationGuide } from "@/components/sections/installation-guide";
 import { MustHaveList } from "@/components/sections/must-have-list";
 import { QnaCommunity } from "@/components/sections/qna-community";
+import { BuyingGuide } from "@/components/sections/buying-guide";
 import { TeslaFooter } from "@/components/sections/tesla-footer";
 
 export default function Page() {
@@ -15,6 +16,7 @@ export default function Page() {
       <InstallationGuide />
       <MustHaveList />
       <QnaCommunity />
+      <BuyingGuide />
       <TeslaFooter />
     </main>
   );
